@@ -1,0 +1,21 @@
+---
+title: "Lab Template"
+author:  "Student Name"
+date:  "1/1/2020"
+output: html_document
+---
+
+###  Load packages.   
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+```
+
+## R Markdown
+
+
+### Exercise 1
+
+
+### Exercise 2
+
