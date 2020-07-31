@@ -1,5 +1,5 @@
 ---
-title: "Lab Template"
+title: "Lab 3:  Visualizing Spatial Data"
 author:  "Student Name"
 date:  "1/1/2020"
 output: html_document
