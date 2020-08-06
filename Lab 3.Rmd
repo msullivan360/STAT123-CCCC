@@ -1,7 +1,7 @@
 ---
 title: "Lab 3:  Visualizing Spatial Data"
-author:  "Student Name"
-date:  "1/1/2020"
+author:  "Mary Sullivan"
+date:  "August 6, 2020"
 output: html_document
 ---
 
@@ -12,12 +12,44 @@ library(tidyverse)
 ```
 
 ## R Markdown
+```{r}
+dn <- read_csv("data/dennys.csv")
+lq <- read_csv("data/laquinta.csv")
+states <- read_csv("data/states.csv")
 
+```
 
 ### Exercise 1
+```{r message=TRUE, warning=TRUE, collapse=TRUE}
+nrow(dn)
+ncol(dn)
+```
+Each row represents a restaurant.
+Each column represents a variable.
 
 
-### Exercise 2
+### Exercise 5
+
+```{r}
+dn %>%
+  filter(!(state %in% states$abbreviation))
+dn %>%
+  mutate(country = "United States")
+```
+
+
+
+### Exercise 8
+```{r}
+lq %>%
+  mutate(county = case_when(
+    state %in% state.abb   ~ "United States",
+    state %in% c("ON", "BC") ~ "Canada",
+    state == "ANT"  ~ "Colombia",
+  ))
+```
+
+
 
 
 
